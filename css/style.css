@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #470f4d;
+    --main-text-color: #FFFFFF;
+    --title-text-color: #d75f81;
+    --border-color: #999999;
+    --bio-bg-color: #09101a;
+    --bio-border-color: ##293544;
+    --about-bg-color: #111821;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+.highlight{
+    color: var(--title-text-color);
+ }
+ 
+ .devicon{
+     color: var(--main-text-color);
+ }
+ 
+ ion-icon{
+     color: var(--main-text-color);
+     pointer-events: none;
+ }
+
+/*Bio*/
+#bio{
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+#bio-title{
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#bio h2{
+    margin-bottom: 25px;
+}
+
+#bio p{
+    margin-bottom: 20px;
+}
+
+#bio-image{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    margin: 25px 0;
+}
+
+/*Social Media*/
+#social-media{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 35px;
+}
+
+#social-media li{
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+#social-media li a{
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+/*Email*/
+#email{
+    display: flex;
+    justify-content: center;
+}
+
+#email a{
+    flex: 1 1 0;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+#contato{
+    padding: 20px 0;
+    color: var(--title-text-color);
+}
+
+/*About*/
+#about{
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: var(--about-bg-color);
+    padding: 50px;
+
+}
+
+#name{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#title{
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description{
+    max-width: 95%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/*Botao GitHub*/
+#github{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 25px 0;
+    padding: 12px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+}
+
+#github ion-icon,
+#github span{
+    flex: 1 1 0;
+}
+
+#github ion-icon{
+    font-size: 20px;
+    max-width: 20px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+#github:hover{
+    background-color: transparent;
+}
+
+/*Skills*/
+#skills{
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+    margin-bottom: 40px;
+    font-size: 34px;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+#skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skills-box{
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 55px;
+
+}
+
+.skills-title{
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--main-color);
+}
+
+.skills-box i{
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+/*Tooltip*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
+  }
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-weight: bold;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Mobile*/
+@media(max-width: 450px){
+    #container{
+        flex-direction: column;
+    }
+
+    #bio{
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+    }
+
+    #bio p{
+        max-width: 60%;
+        margin: 20px auto;
+    }
+
+    #contato{
+        padding: 5px 0;
+    }
+    #about{
+        text-align: center;
+        padding: 30px;
+    }
+
+    #name{
+        display: none;
+    }
+    .description{
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;;
+    }
+
+    #github{
+        margin: 30px auto;
+    }
+
+    .skills-box{
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .skills-title{
+        text-align: left;
+    }
+
+    .skills-box i{
+        font-size: 70px;
+    }
+}
